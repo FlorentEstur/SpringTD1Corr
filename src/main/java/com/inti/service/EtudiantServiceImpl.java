@@ -1,5 +1,7 @@
 package com.inti.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +17,7 @@ public class EtudiantServiceImpl implements IEtudiantService {
 	@Override
 	public Etudiant getEtudiant(int id) {
 
-		return ier.getReferenceById(id);
+		return ier.findById(id).get();
 	}
 
 }
